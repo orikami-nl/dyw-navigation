@@ -1,7 +1,13 @@
 module DywNavigation
-  class NavigationController < ApplicationController
+  class NavigationController < DywNavigation::ApplicationController
+	# GET /navigation
 	def index
-		@navboxes Dyw_navigation::Navbox.all
-	end	 
+		render :layout => 'dyw_navigation/application'
+		@navboxes = Navbox.all
+	end	
+	def new
+		render :layout => 'dyw_navigation/application'
+		@navbox = Navbox.new
+	end
   end
 end
