@@ -1,4 +1,4 @@
-<%= form_for(@nav_box) do |f| %>
+<%= form_for @nav_box, :html => {:multipart => true} do |f| %>
   <% if @nav_box.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@nav_box.errors.count, "error") %> prohibited this nav_box from being saved:</h2>
@@ -20,8 +20,7 @@
     <%= f.text_field :link %>
   </div>
   <div class="field">
-    <%= f.label :image %><br />
-    <%= f.text_field :image %>
+    <%= f.file_field :image %>
   </div>
   <div class="actions">
     <%= f.submit %>

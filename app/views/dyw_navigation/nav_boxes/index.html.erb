@@ -14,7 +14,7 @@
   <tr>
     <td><%= nav_box.title %></td>
     <td><%= nav_box.link %></td>
-    <td><%= nav_box.image %></td>
+    <td><%= image_tag nav_box.image_url.to_s %></td>
     <td><%= link_to 'Show', nav_box %></td>
     <td><%= link_to 'Edit', edit_nav_box_path(nav_box) %></td>
     <td><%= link_to 'Destroy', nav_box, confirm: 'Are you sure?', method: :delete %></td>
