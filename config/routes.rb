@@ -1,4 +1,4 @@
 DywNavigation::Engine.routes.draw do
-	resources :navigation
-	root :to => 'navigation#index'
+  resources :nav_boxes
+	root :to => 'nav_boxes#index'
 end

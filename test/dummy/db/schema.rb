@@ -10,11 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110606223704) do
+ActiveRecord::Schema.define(:version => 20110609115446) do
 
   create_table "dyw_navigation_links", :force => true do |t|
     t.text     "title"
     t.text     "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "dyw_navigation_nav_boxes", :force => true do |t|
+    t.string   "title"
+    t.string   "link"
+    t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

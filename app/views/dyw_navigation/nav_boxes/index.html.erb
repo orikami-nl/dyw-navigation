@@ -1,0 +1,27 @@
+<h1>Listing nav_boxes</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Link</th>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @nav_boxes.each do |nav_box| %>
+  <tr>
+    <td><%= nav_box.title %></td>
+    <td><%= nav_box.link %></td>
+    <td><%= nav_box.image %></td>
+    <td><%= link_to 'Show', nav_box %></td>
+    <td><%= link_to 'Edit', edit_nav_box_path(nav_box) %></td>
+    <td><%= link_to 'Destroy', nav_box, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Nav box', new_nav_box_path %>
