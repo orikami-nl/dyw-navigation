@@ -1,5 +1,26 @@
 module DywNavigation
   class NavBoxesController < ApplicationController
+		def move_left
+			current_box = NavBox.find(params[:id])
+			left_box = current_box.previous_box
+			current_position = current_box.position
+			left_position = left_box.position
+			left_box.update_attributes(:position => 'foo')			
+			current_box.update_attributes(:position => left_position)
+			left_box.update_attributes(:position => current_position)			
+			redirect_to root_path
+		end
+
+		def move_right
+			current_box = NavBox.find(params[:id])
+			right_box = current_box.next_box
+			current_position = current_box.position
+			right_position = right_box.position
+			right_box.update_attributes(:position => 'foo')			
+			current_box.update_attributes(:position => right_position)
+			right_box.update_attributes(:position => current_position)			
+			redirect_to root_path
+		end
     # GET /nav_boxes
     # GET /nav_boxes.json
     def index
