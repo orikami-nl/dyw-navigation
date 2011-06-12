@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+<p>
+  <b>Position:</b>
+  <%= @nav_box.position %>
+</p>
 
 <p>
   <b>Title:</b>
@@ -11,8 +14,8 @@
 </p>
 
 <p>
-  <b>Image:</b>
-  <%= @nav_box.image %>
+  <b>Image:</b><br>
+  <%= image_tag @nav_box.image_url.to_s %>
 </p>
 
 

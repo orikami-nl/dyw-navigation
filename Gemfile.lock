@@ -121,6 +121,7 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.6)
     rake (0.8.7)
+    rmagick (2.13.1)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -173,6 +174,7 @@ DEPENDENCIES
   pg
   rails (= 3.1.0.rc1)
   rake (~> 0.8.7)
+  rmagick
   rspec-rails
   sass
   selenium-client

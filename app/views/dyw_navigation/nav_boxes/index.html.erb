@@ -1,21 +1,28 @@
 <h1>Listing Navigation Boxes</h1>
 
+
+
 <div id="nav-boxes">
-  <% @nav_boxes.each do |nav_box| %>
-		<div class="nav_box">
-			<div class="image">			
-				<%= image_tag nav_box.image_url.to_s %>
+	<% if @nav_boxes.count.zero? %>
+		<p>No navigation-boxes are present. You may create one by clicking the link.</p>
+	<% else %>
+  	<% @nav_boxes.each do |nav_box| %>
+			<div class="nav_box">
+				<div class="image", align="center">			
+					<%= image_tag nav_box.image_url(:thumb).to_s %>
+				</div>
+				<div class="descriptions", align="center">
+					<b>Position:</b> <%= nav_box.position %> <br>
+					<b>Title:</b> <%= truncate(nav_box.title) %> <br>
+					<b>Links to:</b> <%= truncate(nav_box.link) %>
+				</div>
+				<div class="actions", align="center">
+					<%= link_to 'Show', nav_box %> | <%= link_to 'Edit', edit_nav_box_path(nav_box) %> | <%= link_to 'Destroy', nav_box, confirm: 'Are you sure?', method: :delete %>	
+				</div>
 			</div>
-			<div class="descriptions">
-				<b>Title:</b> <%= nav_box.title %> <br>
-				<b>Links to:</b> <%= nav_box.link %>
-			</div>
-			<div class="actions">
-				<%= link_to 'Show', nav_box %> | <%= link_to 'Edit', edit_nav_box_path(nav_box) %> | <%= link_to 'Destroy', nav_box, confirm: 'Are you sure?', method: :delete %>	
-			</div>
-		</div>
-	<% end %>
-</div>
+		<% end %>
+	</div>
+<% end %>
 
 <br />
 

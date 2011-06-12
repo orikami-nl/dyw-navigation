@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110609115446) do
+ActiveRecord::Schema.define(:version => 20110612120258) do
 
   create_table "dyw_navigation_links", :force => true do |t|
     t.text     "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20110609115446) do
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "position"
   end
 
   create_table "dyw_navigation_navboxes", :force => true do |t|

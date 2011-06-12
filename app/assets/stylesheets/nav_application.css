@@ -1,0 +1,61 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+
+h1 { margin: 15px 0; font-size: 22px; font-weight: normal; }
+h2 { font-size: 22px; margin: 15px 0; font-weight: normal;}
+h3 { font-size: 18px; margin: 10px 0; font-weight: normal;}
+h4 { font-size: 16px; margin: 10px 0; font-weight: normal;}
+
+body {
+  font-size: 12px;
+  font-family: sans-serif;  
+}
+
+.nav_box {
+	width: 260px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	border-width: 1px;
+	margin: 5px;
+	padding: 5px;
+}
+
+.descriptions {
+	overflow: hidden;
+}
+
+/* flash-messages */
+.flash .message {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  text-align:center;
+  margin: 0 auto 15px;
+}
+
+.flash .message p {
+  margin:8px;
+}
+.flash .error {
+  border: 1px solid #fbb;
+  background-color: #fdd;
+}
+.flash .warning {
+  border: 1px solid #fffaaa;
+  background-color: #ffffcc;
+}
+.flash .notice {
+  border: 1px solid #1FDF00;
+  background-color: #BBFFB6;
+}
+
+.flash .alert {
+  border: 1px solid #fbb;
+  background-color: #fdd;
+}
+
+

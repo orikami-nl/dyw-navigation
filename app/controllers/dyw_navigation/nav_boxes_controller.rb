@@ -3,7 +3,7 @@ module DywNavigation
     # GET /nav_boxes
     # GET /nav_boxes.json
     def index
-      @nav_boxes = NavBox.all
+      @nav_boxes = NavBox.find(:all, :order => 'position')
   
       respond_to do |format|
         format.html # index.html.erb

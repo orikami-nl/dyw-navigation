@@ -14,6 +14,8 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'simple_form'
 gem "carrierwave"
+# did apt-get install libmagick9-dev for this to work:
+gem 'rmagick'
 
 if RUBY_VERSION < '1.9'
   gem "ruby-debug", ">= 0.10.3"
