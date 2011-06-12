@@ -1,26 +1,21 @@
-<h1>Listing nav_boxes</h1>
+<h1>Listing Navigation Boxes</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Link</th>
-    <th>Image</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @nav_boxes.each do |nav_box| %>
-  <tr>
-    <td><%= nav_box.title %></td>
-    <td><%= nav_box.link %></td>
-    <td><%= image_tag nav_box.image_url.to_s %></td>
-    <td><%= link_to 'Show', nav_box %></td>
-    <td><%= link_to 'Edit', edit_nav_box_path(nav_box) %></td>
-    <td><%= link_to 'Destroy', nav_box, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="nav-boxes">
+  <% @nav_boxes.each do |nav_box| %>
+		<div class="nav_box">
+			<div class="image">			
+				<%= image_tag nav_box.image_url.to_s %>
+			</div>
+			<div class="descriptions">
+				<b>Title:</b> <%= nav_box.title %> <br>
+				<b>Links to:</b> <%= nav_box.link %>
+			</div>
+			<div class="actions">
+				<%= link_to 'Show', nav_box %> | <%= link_to 'Edit', edit_nav_box_path(nav_box) %> | <%= link_to 'Destroy', nav_box, confirm: 'Are you sure?', method: :delete %>	
+			</div>
+		</div>
+	<% end %>
+</div>
 
 <br />
 
