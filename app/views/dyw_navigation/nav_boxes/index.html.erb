@@ -18,6 +18,7 @@
 				</div>
 				<div class="actions", align="center">
 					<%= link_to 'Show', nav_box %> | <%= link_to 'Edit', edit_nav_box_path(nav_box) %> | <%= link_to 'Destroy', nav_box, confirm: 'Are you sure?', method: :delete %>	<br>
+					<!-- Als boxes links of rechts niet bestaan, laat dan de juiste acties zien -->
 					<%= link_to('Move Left', :controller => 'nav_boxes', :action => 'move_left', :id => nav_box) if nav_box.previous_box %>
 					<% if nav_box.previous_box && nav_box.next_box %>
 						|
