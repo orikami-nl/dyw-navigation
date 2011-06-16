@@ -6,27 +6,32 @@
 	<% if @nav_boxes.count.zero? %>
 		<p>No navigation-boxes are present. You may create one by clicking the link.</p>
 	<% else %>
-  	<% @nav_boxes.each do |nav_box| %>
-			<div class="nav_box">
-				<div class="image", align="center">			
-					<%= image_tag nav_box.image_url(:thumb).to_s %>
-				</div>
-				<div class="descriptions", align="center">
-					<b>Position:</b> <%= nav_box.position %> <br>
-					<b>Title:</b> <%= truncate(nav_box.title) %> <br>
-					<b>Links to:</b> <%= truncate(nav_box.link) %>
-				</div>
-				<div class="actions", align="center">
-					<%= link_to 'Show', nav_box %> | <%= link_to 'Edit', edit_nav_box_path(nav_box) %> | <%= link_to 'Destroy', nav_box, confirm: 'Are you sure?', method: :delete %>	<br>
-					<!-- Als boxes links of rechts niet bestaan, laat dan de juiste acties zien -->
-					<%= link_to('Move Left', :controller => 'nav_boxes', :action => 'move_left', :id => nav_box) if nav_box.previous_box %>
-					<% if nav_box.previous_box && nav_box.next_box %>
-						|
-					<% end %> 
-					<%= link_to('Move Right', :controller => 'nav_boxes', :action => 'move_right', :id => nav_box) if nav_box.next_box %>
-				</div>
-			</div>
-		<% end %>
+		<table>
+			<tr>
+  			<% @nav_boxes.each do |nav_box| %>
+					<td>
+					<div class="nav_box">
+						<div class="image", align="center">			
+							<%= link_to image_tag(nav_box.image_url(:thumb).to_s, :border => 0), nav_box.link %>
+						</div>
+						<div class="descriptions", align="center">
+							<b>Title:</b> <%= truncate(nav_box.title) %> <br>
+							<b>Links to:</b> <%= truncate(nav_box.link) %>
+						</div>
+						<div class="actions", align="center">
+							<%= link_to 'Show', nav_box %> | <%= link_to 'Edit', edit_nav_box_path(nav_box) %> | <%= link_to 'Destroy', nav_box, confirm: 'Are you sure?', method: :delete %>	<br>
+							<!-- Als boxes links of rechts niet bestaan, laat dan de juiste acties zien -->
+							<%= link_to('Move Left', :controller => 'nav_boxes', :action => 'move_left', :id => nav_box) if nav_box.previous_box %>
+							<% if nav_box.previous_box && nav_box.next_box %>
+								|
+							<% end %> 
+							<%= link_to('Move Right', :controller => 'nav_boxes', :action => 'move_right', :id => nav_box) if nav_box.next_box %>
+						</div>
+					</div>
+					</td>
+				<% end %>
+			</tr>
+		</table>
 	</div>
 <% end %>
 
