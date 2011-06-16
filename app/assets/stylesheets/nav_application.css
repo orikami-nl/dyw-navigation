@@ -24,6 +24,11 @@ body {
 	border-width: 1px;
 	margin: 5px;
 	padding: 5px;
+	float: left;
+}
+
+#clearfix{
+	clear: both;
 }
 
 .descriptions {
