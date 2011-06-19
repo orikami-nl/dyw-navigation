@@ -62,7 +62,15 @@ module DywNavigation
     # POST /nav_boxes
     # POST /nav_boxes.json
     def create
+			last_nav_box = NavBox.find(:all, :order => 'position').last
+			if last_nav_box.nil?
+				last_position = 0
+			else
+				last_position = last_nav_box.position.to_i
+			end
+
       @nav_box = NavBox.new(params[:nav_box])
+			@nav_box.position = last_position + 1 
   
       respond_to do |format|
         if @nav_box.save
