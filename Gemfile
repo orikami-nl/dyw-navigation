@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem 'rails', '3.1.0.rc1'
+gem 'rails', '3.1.0.rc3'
 gem 'sprockets'
 gem 'rake', '~> 0.8.7'
 
@@ -16,6 +16,7 @@ gem 'simple_form'
 gem "carrierwave"
 # did apt-get install libmagick9-dev for this to work:
 gem 'rmagick'
+gem 'fog'
 
 if RUBY_VERSION < '1.9'
   gem "ruby-debug", ">= 0.10.3"
