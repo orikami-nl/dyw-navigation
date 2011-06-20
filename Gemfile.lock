@@ -1,12 +1,3 @@
-GIT
-  remote: git://github.com/sstephenson/sprockets.git
-  revision: 24741708f01c9de6c62bf6b86a6af3415cfbfc65
-  specs:
-    sprockets (2.0.0.beta.10)
-      hike (~> 1.1)
-      rack (~> 1.0)
-      tilt (!= 1.3.0, ~> 1.1)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -145,6 +136,10 @@ GEM
       json_pure
       rubyzip
     simple_form (1.4.1)
+    sprockets (2.0.0.beta.10)
+      hike (~> 1.0)
+      rack (~> 1.0)
+      tilt (!= 1.3.0, ~> 1.1)
     sqlite3 (1.3.3)
     term-ansicolor (1.0.5)
     therubyracer (0.9.1)
@@ -181,7 +176,7 @@ DEPENDENCIES
   sass
   selenium-client
   simple_form
-  sprockets!
+  sprockets
   sqlite3
   therubyracer
   therubyracer-heroku
