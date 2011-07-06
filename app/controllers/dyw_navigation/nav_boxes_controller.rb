@@ -47,6 +47,8 @@ module DywNavigation
     # GET /nav_boxes/new.json
     def new
       @nav_box = NavBox.new
+			#WIP, for route selection!!
+			@routes = VanVught::Application.routes.routes
   
       respond_to do |format|
         format.html # new.html.erb
