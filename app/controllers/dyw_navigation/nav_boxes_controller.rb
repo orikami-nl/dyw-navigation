@@ -76,7 +76,7 @@ module DywNavigation
   
       respond_to do |format|
         if @nav_box.save
-          format.html { redirect_to @nav_box, notice: 'Nav box was successfully created.' }
+					format.html { redirect_to @nav_box, notice: 'Nav box was successfully created.' }
           format.json { render json: @nav_box, status: :created, location: @nav_box }
         else
           format.html { render action: "new" }
