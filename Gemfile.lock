@@ -174,7 +174,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  carrierwave
+  carrierwave (= 0.5.4)
   coffee-script
   cucumber-rails
   database_cleaner
