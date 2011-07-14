@@ -13,7 +13,7 @@ gem 'coffee-script'
 gem 'uglifier'
 gem 'jquery-rails'
 gem 'simple_form'
-gem 'carrierwave', '0.5.4'
+gem 'carrierwave', '0.5.3'
 # did apt-get install libmagick9-dev for this to work:
 gem 'rmagick'
 gem 'fog'
