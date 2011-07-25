@@ -76,6 +76,7 @@ module DywNavigation
   
       respond_to do |format|
         if @nav_box.save
+					Rails.cache.clear
 					format.html { redirect_to @nav_box, notice: 'Nav box was successfully created.' }
           format.json { render json: @nav_box, status: :created, location: @nav_box }
         else
@@ -92,6 +93,7 @@ module DywNavigation
   
       respond_to do |format|
         if @nav_box.update_attributes(params[:nav_box])
+					Rails.cache.clear
           format.html { redirect_to @nav_box, notice: 'Nav box was successfully updated.' }
           format.json { head :ok }
         else
@@ -106,7 +108,8 @@ module DywNavigation
     def destroy
       @nav_box = NavBox.find(params[:id])
       @nav_box.destroy
-  
+  		Rails.cache.clear
+
       respond_to do |format|
         format.html { redirect_to nav_boxes_url }
         format.json { head :ok }
