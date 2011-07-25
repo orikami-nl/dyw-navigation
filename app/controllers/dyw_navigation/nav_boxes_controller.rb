@@ -7,7 +7,8 @@ module DywNavigation
 			left_position = left_box.position
 			left_box.update_attributes(:position => 'foo')			
 			current_box.update_attributes(:position => left_position)
-			left_box.update_attributes(:position => current_position)			
+			left_box.update_attributes(:position => current_position)
+  		Rails.cache.clear
 			redirect_to root_path
 		end
 
@@ -19,6 +20,7 @@ module DywNavigation
 			right_box.update_attributes(:position => 'foo')			
 			current_box.update_attributes(:position => right_position)
 			right_box.update_attributes(:position => current_position)			
+  		Rails.cache.clear
 			redirect_to root_path
 		end
     # GET /nav_boxes
