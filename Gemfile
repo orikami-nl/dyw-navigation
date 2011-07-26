@@ -6,7 +6,6 @@ end
 
 group :test do
 	gem "capybara"
-	gem "factory_girl_rails"
 	gem "cucumber-rails"
 	gem "rspec-rails"
 	gem "database_cleaner"
