@@ -7,8 +7,6 @@ Gem::Specification.new do |s|
   s.description = "Insert DywNavigation description."
   s.files = Dir["lib/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.version = "0.0.1"
-  s.add_dependency 'paperclip', '~> 2.3'
-	
 	s.add_dependency 'rails', '>3.1.0.rc3'
 	s.add_dependency 'sprockets', '2.0.0.beta.10'
 	s.add_dependency 'rake', '~> 0.8.7'
