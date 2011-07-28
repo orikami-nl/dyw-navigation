@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version = "0.0.1"
 	s.add_dependency 'rails', '>3.1.0.rc3'
 	s.add_dependency 'sprockets', '2.0.0.beta.10'
-	s.add_dependency 'rake', '~> 0.8.7'
+	s.add_dependency 'rake'
 	s.add_dependency 'sass'
 	s.add_dependency 'json'
 	s.add_dependency 'coffee-script'

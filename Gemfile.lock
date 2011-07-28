@@ -9,7 +9,7 @@ PATH
       json
       pg
       rails (> 3.1.0.rc3)
-      rake (~> 0.8.7)
+      rake
       rmagick
       sass
       simple_form
@@ -200,6 +200,7 @@ DEPENDENCIES
   database_cleaner
   dyw-navigation!
   jquery-rails
+  rake (~> 0.8.7)
   rspec-rails
   selenium-client
   sqlite3

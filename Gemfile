@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
 gem 'jquery-rails'
+gem 'rake', '~> 0.8.7'
 
 if RUBY_VERSION < '1.9'
   gem "ruby-debug", ">= 0.10.3"
