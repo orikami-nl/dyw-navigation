@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.files = Dir["lib/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.version = "0.0.1"
 	s.add_dependency 'rails', '>3.1.0.rc3'
-	s.add_dependency 'sprockets', '2.0.0.beta.10'
+	s.add_dependency 'sprockets'
 	s.add_dependency 'rake'
 	s.add_dependency 'sass'
 	s.add_dependency 'json'
